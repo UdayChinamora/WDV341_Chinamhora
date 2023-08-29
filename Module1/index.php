@@ -25,8 +25,11 @@
 
 
 echo'Name : Uday Chinhamora <br>';
-echo'Date: 28 August 2023 <br>';
+echo'Date: 28 August 2023 <br><br><br>';
+echo "<a href='git_terms.php' title='Git Terms'>Git-related terms:</a>";
 
 ?>
+
+
 </body>
 </html>
