@@ -28,8 +28,16 @@ echo '<div class="assignment">
             <h2>Git-related terms Assignment</h2>
             <a href="git_terms.php" class="btn">Go to Git-related terms Assignment</a>
         </div>
+
+        <br>
+        <div class="assignment">
+            <h2>PHP Basics Assignment</h2>
+            <a href="php_basics.php" class="btn">Go to PHP Basics Assignment</a>
+        </div>
 ';
 
 ?>
+
+
 </body>
 </html>
