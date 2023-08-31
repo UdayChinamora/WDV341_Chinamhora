@@ -1,35 +1,47 @@
-<?php 
-
-//echo'Hello,World <br>';
-//echo'Name : Uday Chinhamora <br>';
-//echo'Date: 28 August 2023 <br>';
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My Home Page</title>
-
-	<h1><?php 
-	echo'Home Page';
-	?>
-</h1>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+ 
 
 
+   
 </head>
 <body>
-<?php 
+     <?php
+        echo '
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="wdv341.php">HomeWorks</a></li>
+                <li><a href="#">Contact</a></li>
+              
+            </ul>
+        </nav>
+    </header>
 
+    ';
+    echo '
+    <div class="container">
+        <h1>Uday Chinhamora Home Page!</h1>
+        <p>Check out my services and explore my portfolio.</p>
 
-echo'Name : Uday Chinhamora <br>';
-echo'Date
-: 28 August 2023 <br><br><br>';
-echo "<a href='wdv341.php' title='Git Terms'>Homework Page</a>";
-?>
+        <div class="button-container">
+            <a href="#" class="button">Learn More</a>
+            <a href="#" class="button">Contact Us</a>
+        </div>
 
+        <img src="udayGraduate.jpg" alt="Uday Image" width="20%" height ="50%">
+    </div>
+    ';
 
+   echo' <footer>
+        <p>&copy; 2023 Uday Chinhamora. All rights reserved.</p>
+    </footer>
+    ;'
+     ?>
 </body>
 </html>

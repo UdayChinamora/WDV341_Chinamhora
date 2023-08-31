@@ -3,25 +3,37 @@
 <head>
     <title>Homework Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    
     <img src="homework.jpg" alt="Homework Image">
 </head>
+
+
+
+
+
 <body>
+
+
  <?php 
    echo' <header>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">Assignments</a></li>
+                <li><a href="wdv341.php">Assignments</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
+
    ';
+
+
    echo '
     <div class="container">
-        <h1>Welcome to Uday Chinhamora Homework Page!</h1>
-        <p>Here you can find all my assignments and resources.</p>
+
+        <h1>Uday Chinhamora Homework Page!</h1>
+     
 
         <div class="button-container">
             <a href="index.php" class="button">Home Page Assignment</a>
@@ -34,9 +46,10 @@
 ';
    
    echo' <footer>
-        <p>&copy; 2023 Homework Page. All rights reserved.</p>
+        <p>&copy; 2023 Uday Chinhamora Homework Page. All rights reserved.</p>
     </footer>
    ';
     ?>
+
 </body>
 </html>

@@ -13,7 +13,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color: purple;
     padding: 20px;
     color: #fff;
 }
@@ -42,7 +42,7 @@ nav ul li a {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: blue;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -63,3 +63,4 @@ footer {
     color: #fff;
     text-align: center;
 }
+
