@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
  
 
 
@@ -34,7 +34,7 @@
             <a href="#" class="button">Contact Us</a>
         </div>
 
-        <img src="udayGraduate.jpg" alt="Uday Image" width="20%" height ="50%">
+        <img src="images/udayGraduate.jpg" alt="Uday Image" width="20%" height ="50%">
     </div>
     ';
 

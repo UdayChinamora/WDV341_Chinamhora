@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>Homework Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
     
-    <img src="homework.jpg" alt="Homework Image">
+    <img src="images/homework.jpg" alt="Homework Image">
 </head>
 
 
@@ -41,7 +41,7 @@
             <a href="php_basics.php" class="button">PHP Basics Assignment</a>
         </div>
 
-        <img src="homework2.jpg" alt="Homework Image">
+        <img src="images/homework2.jpg" alt="Homework Image">
     </div>
 ';
    
