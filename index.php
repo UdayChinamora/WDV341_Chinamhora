@@ -27,7 +27,7 @@
 echo'Name : Uday Chinhamora <br>';
 echo'Date
 : 28 August 2023 <br><br><br>';
-echo "<a href='homework.php' title='Git Terms'>Homework Page</a>";
+echo "<a href='wdv341.php' title='Git Terms'>Homework Page</a>";
 ?>
 
 

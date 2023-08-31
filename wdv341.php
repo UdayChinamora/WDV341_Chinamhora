@@ -20,7 +20,7 @@
    ';
    echo '
     <div class="container">
-        <h1>Welcome to the Homework Page!</h1>
+        <h1>Welcome to Uday Chinhamora Homework Page!</h1>
         <p>Here you can find all my assignments and resources.</p>
 
         <div class="button-container">
