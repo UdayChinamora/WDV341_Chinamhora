@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
  
 
 
@@ -18,7 +18,6 @@
                 <li><a href="#">About</a></li>
                 <li><a href="wdv341.php">HomeWorks</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="practice.php">Practice</a></li>
               
             </ul>
         </nav>
@@ -27,7 +26,7 @@
     ';
     echo '
     <div class="container">
-        <h1>Uday Chinhamora Home Page!</h1>
+        <h1>Welcome to Uday Chinhamora Home Page!</h1>
         <p>Check out my services and explore my portfolio.</p>
 
         <div class="button-container">
@@ -35,7 +34,7 @@
             <a href="#" class="button">Contact Us</a>
         </div>
 
-        <img src="images/udayGraduate.jpg" alt="Uday Image" width="20%" height ="50%">
+        <img src="udayGraduate.jpg" alt="Uday Image" width="40%" height ="20%">
     </div>
     ';
 
