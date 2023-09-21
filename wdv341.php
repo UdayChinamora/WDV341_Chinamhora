@@ -20,7 +20,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="wdv341.php">Assignments</a></li>
-                <li><a href="#">Resources</a></li>
+                <li><a href="dbConnect.php">Connect</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
