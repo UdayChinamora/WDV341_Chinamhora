@@ -16,9 +16,9 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="wdv341.php">HomeWorks</a></li>
+                <li><a href="../WDV341/Assignments/wdv341.php">HomeWorks</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="practice.php">Practice</a></li>
+                <li><a href="Practice/practice.php">Practice</a></li>
               
             </ul>
         </nav>

@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>Homework Page</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     
-    <img src="images/homework.jpg" alt="Homework Image">
+    <img src="../images/homework.jpg" alt="Homework Image">
 </head>
 
 
@@ -18,10 +18,10 @@
    echo' <header>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="wdv341.php">Assignments</a></li>
-                <li><a href="dbConnect.php">Connect</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="../Database/dbConnect.php">Connect</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -36,10 +36,10 @@
      
 
         <div class="button-container">
-            <a href="index.php" class="button">Home Page Assignment</a>
+            <a href="../index.php" class="button">Home Page Assignment</a>
             <a href="git_terms.php" class="button">Git-related terms Assignment</a><br><br>
             <a href="php_basics.php" class="button">PHP Basics Assignment</a>
-             <a href="inputForm.html" class="button">5-1: HTML Form Processort
+             <a href="inputForm.html"  class="button">5-1: HTML Form Processort
 
 
 
@@ -51,7 +51,7 @@
             </a>
         </div>
 
-        <img src="images/homework2.jpg" alt="Homework Image">
+        <img src="../images/homework2.jpg" alt="Homework Image">
     </div>
 ';
    
