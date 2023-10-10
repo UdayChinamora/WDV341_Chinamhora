@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "uday";//database username
-$password = "masahwira123$";//database password
+$username = "root";//database username
+$password = "";//database password
 $databasename = "wdv341_events";
 
 

@@ -36,11 +36,13 @@
      
 
         <div class="button-container">
-            <a href="../index.php" class="button">Home Page Assignment</a>
+            <a href="../index.php" class="button">Home Page Assignment</a><br><br>
             <a href="git_terms.php" class="button">Git-related terms Assignment</a><br><br>
-            <a href="php_basics.php" class="button">PHP Basics Assignment</a>
-             <a href="inputForm.html"  class="button">5-1: HTML Form Processor</a>
-              <a href="PHP-Functions.php"  class="button">4-1:PHP Functions</a>
+            <a href="php_basics.php" class="button">PHP Basics Assignment</a><br><br>
+             <a href="inputForm.html"  class="button">5-1: HTML Form Processor</a><br><br>
+              <a href="PHP-Functions.php"  class="button">4-1:PHP Functions</a><br><br>
+               <a href="formartEvents.php"  class="button">Format Events</a><br><br>
+                <a href="selectOneEvent.php"  class="button">7-2: Create selectOneEvent.php</a><br><br>
         </div>
 
         <img src="../images/homework2.jpg" alt="Homework Image">
