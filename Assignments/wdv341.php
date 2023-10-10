@@ -43,6 +43,7 @@
               <a href="PHP-Functions.php"  class="button">4-1:PHP Functions</a><br><br>
                <a href="formartEvents.php"  class="button">Format Events</a><br><br>
                 <a href="selectOneEvent.php"  class="button">7-2: Create selectOneEvent.php</a><br><br>
+                <a href="Php_Formated_Retail_Products.php"  class="button">8-1: PHP Formatted Content</a><br><br>
         </div>
 
         <img src="../images/homework2.jpg" alt="Homework Image">

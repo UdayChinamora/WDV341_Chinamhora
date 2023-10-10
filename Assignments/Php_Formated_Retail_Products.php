@@ -46,7 +46,7 @@ if ($stmt->rowCount() > 0) {
         echo "<div class='productBlock'>";
         
         echo"<div class='productImage'>";
-        echo "<p><img src='".$row['product_image']."'/></p>";
+        echo "<p><img src='../images/".$row['product_image']."'/></p>";
         echo"</div>";
         
         echo "<h3 class='productName'>{$row['product_name']}</h3>";
