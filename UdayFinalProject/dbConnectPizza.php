@@ -11,6 +11,7 @@ $conn = new PDO("mysql:host=$servername;dbname=$databasename", $username, $passw
 $conn-> setAttribute(PDO::ATTR_ERRMODE,PDO:: ERRMODE_EXCEPTION);
 
 echo "@uday";
+
 }
 catch(PDOException $e){
   echo"Connection failed: " .$e->getMessage();

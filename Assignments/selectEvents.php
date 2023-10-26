@@ -35,5 +35,6 @@ echo"<p style='border:solid 1px black;width:50%;'>";
 echo"</p>";
   }
 ?>
+
 </body>
 </html>
