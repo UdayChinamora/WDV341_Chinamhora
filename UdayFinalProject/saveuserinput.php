@@ -19,6 +19,7 @@
 
 require 'dbConnectPizza.php';
 echo"<br><br>";
+
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Check if the form is submitted

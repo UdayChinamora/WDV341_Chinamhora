@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+tml>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>WDV101 Intro HTML and CSS</title>
@@ -32,14 +32,24 @@
 
   <legend>Example Form</legend>
   
+ 
+  
   <p>
   	<label for="first_name">First Name:</label> 
-    <input type="text" name="first_name" id="first_name" required/>
+    <input type="text" name="first_name" id="first_name"  value="<?php echo isset($_POST['first_name']) ? $_POST['first_name'] : ''; ?>"  required/>
+      <?php if (isset($nameError)) { echo "<span class='error'>$nameError</span>"; } ?><br>
   </p>
   
   <p>
   	<label for="last_name">Last Name:</label> 
-    <input type="text" name="last_name" id="last_name" required/>
+    <input type="text" name="last_name" id="last_name"  value="<?php echo isset($_POST['last_name']) ? $_POST['last_name'] : ''; ?>"  required/>
+    <?php if (isset($nameError)) { echo "<span class='error'>$nameError</span>"; } ?><br>
+
+  </p>
+    <p>
+    <label for="email">Email:</label>
+  <input type="email" id="email" name="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" required>
+  <?php if (isset($emailError)) { echo "<span class='error'>$emailError</span>"; } ?><br>
   </p>
   
   <p>
@@ -47,11 +57,7 @@
     <input type="text" name="school_name" id="school_name" required/>
   </p>
 
-  <p>
-  	
-	  <label for="customerEmail">Customer Email:</label>
-	  <input type="email" id="customerEmail" name="customerEmail" required><br>
-  </p>
+ 
   
   <label for="academicStanding">Academic Standing:</label><br>
   <input type="radio" id="highSchool" name="academicStanding" value="High School">
@@ -61,8 +67,8 @@
   <input type="radio" id="sophomore" name="academicStanding" value="Sophomore">
   <label for="sophomore">Sophomore</label><br>
 
-  <label for="selectedMajor">Selected Major:</label>
-  <select id="selectedMajor" name="selectedMajor">
+  <label for="selected_Major">Selected Major:</label>
+  <select id="selected_Major" name="selected_Major">
     <option value="">Default option</option>
     <option value="CIS">Computer Information Systems</option>
     <option value="GD">Graphic Design</option>
@@ -78,7 +84,10 @@
   <textarea id="comments" name="comments"></textarea><br>
 
 
-
+  <div style="display: none;">
+    <label for="honeypot">Leave this field blank:</label>
+    <input type="text" id="honeypot" name="honeypot">
+  </div>
 
 
   <p>

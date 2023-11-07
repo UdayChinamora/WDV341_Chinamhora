@@ -19,7 +19,7 @@
       max-width: 400px;
       margin: 0 auto;
       padding: 20px;
-      background-color: #fff;
+      background-color:yellow;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -65,15 +65,47 @@
     background-color: green;
     border-radius: 242px;
 }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: red;
+    height:50px;
+    padding-top:20px ;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+     color: red;
+}
+
+nav ul li a {
+     color: red;
+    text-decoration: none;
+}
+    
   </style>
 </head>
+<header>
+       <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutPizza.php">About Us</a></li>
+                <li><a href="userLoginForm.php">Login</a></li>
+                <li><a href="contactPizza.php">Contact</a></li>
+            </ul>
+        </nav>
+  
+
 <body>
-  <div class="w3-container w3-green">
-  <p><h1>Login</h1></p>
+  <div class="w3-container w3-green" style="border: 15px solid grey;text-align: center;">
+  <p><h1>Admin Login </h1></p>
 </div>
 
 
-<br><br><br><br>
+
+<br><br>
   
     <form  action="loginFormHandler.php" method="POST">
         <label for="username">Username:</label>
@@ -85,7 +117,7 @@
         <input type="submit" value="Login">
 
     </form>
-<br><br><br><br>
+<br><br>
 
 <div class="image-container">
     

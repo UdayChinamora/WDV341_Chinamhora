@@ -55,6 +55,7 @@
                 <li><a href="wdv341.php">Assignments</a></li>
                 <li><a href="selectEvents.php">Connect</a></li>
                 <li><a href="../contactUs.php">Contact</a></li>
+              
             </ul>
         </nav>
 </header>
@@ -67,7 +68,7 @@
         <div> <a href="../index.php" class="button">Home Page Assignment</a></div>
         <div>  <a href="git_terms.php" class="button">Git-related terms Assignment</a></div>
         <div> <a href="php_basics.php" class="button">PHP Basics Assignment</a></div>
-        <div>  <a href="inputForm.html" class="button">5-1: HTML Form Processor</a></div>
+        <div>  <a href="inputForm.php" class="button">5-1: HTML Form Processor</a></div>
         <div> <a href="PHP-Functions.php" class="button">4-1: PHP Functions</a></div>
         <div><a href="formartEvents.php" class="button">Format Events</a> </div>
         <div> <a href="selectOneEvent.php" class="button">7-2: Create selectOneEvent.php</a></div>

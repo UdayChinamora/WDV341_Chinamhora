@@ -19,6 +19,7 @@
                 <li><a href="../WDV341/Assignments/wdv341.php">HomeWorks</a></li>
                 <li><a href="contactUs.php">Contact</a></li>
                 <li><a href="Practice/practice.php">Practice</a></li>
+                <li><a href="../WDV341/UdayFinalProject/index.php">Pizza App</a></li>
               
             </ul>
         </nav>

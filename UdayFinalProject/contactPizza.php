@@ -5,6 +5,7 @@
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <title>Contact Form</title>
   <style>
     body {
@@ -74,16 +75,18 @@
 
   
   <form action="pizzaContactFormHandler.php" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
 
-    <input type="submit" value="Submit">
+        <div class="g-recaptcha" data-sitekey="6Le5dQIpAAAAAKQqCwObzVy5o4EN-7BYwI3j9lw3"></div>
+
+        <input type="submit" value="Submit">
   </form>
 
 <div class="image-container">

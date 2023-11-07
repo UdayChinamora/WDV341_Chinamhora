@@ -35,7 +35,7 @@ $stmt->execute();
                 <li><a href="contactPizza.php">Contact</a></li>
             </ul>
         </nav>
-        <h1><b style="color:white;">Uday Pizza Paradise</b></h1>
+        <h1><b style="color:white;">Gabby's Pizza Paradise</b></h1>
         <p style="color:yellow;">"Delicious slices, endless smiles! We serve happiness, one slice at a time."</p>
     </header>
 <form method="GET" action="search.php">

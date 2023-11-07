@@ -3,6 +3,7 @@
 <head>
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <title>Add Pizza Form</title>
@@ -60,10 +61,39 @@
       color: red;
       margin-bottom: 10px;
     }
+
+    
+ nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+    
   </style>
 </head>
+<header>
+       <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutPizza.php">About Us</a></li>
+                <li><a href="userLoginForm.php">Login</a></li>
+                <li><a href="contactPizza.php">Contact</a></li>
+            </ul>
+        </nav>
+  
+
 <body>
-  <div class="w3-container w3-green">
+  <div class="w3-container w3-green" style="border: 15px solid grey;text-align: center;">
   <p><h1>Add Pizza</h1></p>
 </div>
 
