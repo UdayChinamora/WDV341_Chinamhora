@@ -36,9 +36,10 @@
 <div class="w3-container w3-teal">
        <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
+               <li><a href="index.php">Home</a></li>
                 <li><a href="aboutPizza.php">About Us</a></li>
-                <li><a href="userLoginForm.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
                 <li><a href="contactPizza.php">Contact</a></li>
             </ul>
         </nav>

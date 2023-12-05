@@ -89,10 +89,6 @@ $stmt = $conn->prepare($sql);
 if ($stmt->execute()) {
     // Query executed successfully
     echo "Pizza added successfully! <br>";
-    // Output JavaScript code using PHP
-echo '<script type="text/javascript">';
-echo 'window.location = "currentdetails.php"';
-echo '</script>';
       
 } else {
     // Error executing the query

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Shop</title>
+  <!-- Bootstrap CDN for styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS for dark mode toggle -->
+  <style>
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar with logo, links, and dark mode switch -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="../images/logo.jpg" alt="Pizza Shop Logo" width="300px" height="300px">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutPizza">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <label class="switch">
+              <input type="checkbox" id="dark-mode-toggle">
+              <span class="slider round"></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <!-- Contact section with form and map -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">Contact Us</h2>
+      <p class="text-center">Have any questions or feedback? We'd love to hear from you.</p>
+      <div class="row">
+        <div class="col-lg-6">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617253738317!2d-73.9865807845949!3d40.748440479328445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259011b0e6f85%3A0x77b9a1f6a8c3c8f!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1617222229341!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer with social media icons -->
+  <footer class="py-3 bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="text-white">© 2023 Pizza Shop. All rights reserved.</p>
+        </div>
+        <div class="col-lg-6">
+          <ul class="list-inline text-right">
+            <li class="list-inline-item">
+              <a href="#" class="text-white"><i class="bx bxl-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white"><i class="bx bxl-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white"><i class="bx bxl-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+  </html>

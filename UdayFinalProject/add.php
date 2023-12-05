@@ -84,10 +84,13 @@ nav ul li a {
 <header>
        <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                 <li><a href="index.php">Home</a></li>
                 <li><a href="aboutPizza.php">About Us</a></li>
-                <li><a href="userLoginForm.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="currentDetails.php">Edit Pizza</a></li>
                 <li><a href="contactPizza.php">Contact</a></li>
+
             </ul>
         </nav>
   
@@ -98,7 +101,7 @@ nav ul li a {
 </div>
 
   
- <form  action="saveuserinput.php"  method="POST">
+ <form  action="saveuserinput.php"  method="POST" enctype="multipart/form-data">
     <label for="pizzaID">Pizza ID:</label>
     <input type="number" name="pizzaID" required><br><br>
 
@@ -114,8 +117,9 @@ nav ul li a {
     <label for="price">Price:</label>
     <input type="number" name="price" required><br><br>
 
-    <label for="pizzaImage">Image Name</label>
-    <input type="text" name="pizzaImage" required><br><br>
+    <label for="image">Image Name</label>
+    <input type="file" name="image">
+    <button type="submit" name="upload">Upload Image</button> <br><br>
 
     <input type="submit" value="Add Pizza">
 </form>
