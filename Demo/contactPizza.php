@@ -1,11 +1,10 @@
-
 <?php
 // Include PHPMailer library
 //require_once  __DIR__ . '/vendor/autoload.php';
-require_once 'C:\xampp\htdocs\WDV341\UdayFinalProject\vendor\phpmailer\phpmailer\src\PHPMailer.php';
-require_once 'C:\xampp\htdocs\WDV341\UdayFinalProject\vendor\phpmailer\phpmailer\src\SMTP.php';
-require_once 'C:\xampp\htdocs\WDV341\UdayFinalProject\vendor\phpmailer\phpmailer\src\Exception.php';
-require_once  'C:\xampp\htdocs\WDV341\UdayFinalProject\vendor\autoload.php';
+require_once __DIR__ . '/vendor//phpmailer/src/PHPMailer.php';
+require_once '../phpmailer/src/SMTP.php';
+require_once '../phpmailer/src/Exception.php';
+require_once  __DIR__ . '/vendor/autoload.php';
 
 // Define variables and initialize with empty values
 $name = $email = $subject = $message = "";
@@ -96,86 +95,19 @@ function test_input($data) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <title>Contact Form</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
-
-    h1 {
-      color: #333;
-    }
-
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-    }
-
-    input[type="submit"] {
-      background-color:white;
-      color: blue;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-
     .error {
       color: red;
-      margin-bottom: 10px;
+      float: right;
     }
-
-    .image-container img {
-    display: inline-block;
-    width: 33.33%; 
-    background-color: green;
-}
-  
   </style>
 </head>
-<div class="w3-container w3-green">
-       <nav>
-            <ul>
-                 <li><a href="index.php">Home</a></li>
-                <li><a href="aboutPizza.php">About Us</a></li>
-                <li><a href="register.php">Register</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="contactPizza.php">Contact</a></li>
-            </ul>
-        </nav>
 <body>
   <h1>Contact Us</h1>
   <p>Please fill in this form and we will get back to you as soon as possible.</p>
@@ -207,9 +139,7 @@ function test_input($data) {
     </p>
     <p>
       <input type="submit" name="submit" value="Submit">
-      <input type="reset" value="Clear">
     </p>
-
   </form>
 </body>
 </html>

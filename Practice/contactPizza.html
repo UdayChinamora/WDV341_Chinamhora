@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <script src="https://www.google.com/recaptcha/api.js"></script>>
+  <title>Contact Form</title>
+
+
+
+</head>
+<body>
+  <div class="w3-container w3-green">
+       <nav>
+            <ul>
+                 <li><a href="index.php">Home</a></li>
+                <li><a href="aboutPizza.php">About Us</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="contactPizza.php">Contact</a></li>
+            </ul>
+        </nav>
+  <p><h1>Contact Us</h1></p>
+</div>
+
+  
+  <form action="pizzaContactFormHandler.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+          <div class="g-recaptcha" data-sitekey="6LfdDS4pAAAAAIURQT6PO-rT62Q9Pklju4aU68rq"></div>
+
+        <input type="submit" value="Submit">
+  </form>
+
+  <script>
+  // Get the input elements by their IDs
+  var nameInput = document.getElementById("name");
+  var emailInput = document.getElementById("email");
+  var messageInput = document.getElementById("message");
+
+  // Define a function to check the validity of each input and set a custom error message if invalid
+  function checkValidity(input) {
+    // Get the validity state object of the input
+    var validity = input.validity;
+
+    // If the input is empty, set the error message to "This field is required"
+    if (validity.valueMissing) {
+      input.setCustomValidity("This field is required");
+    }
+    // If the input is an email and does not match the email pattern, set the error message to "Please enter a valid email address"
+    else if (input.type === "email" && validity.typeMismatch) {
+      input.setCustomValidity("Please enter a valid email address");
+    }
+    // Otherwise, set the error message to an empty string
+    else {
+      input.setCustomValidity("");
+    }
+  }
+
+  // Define a function to display the error message using the ::after pseudo-element
+  function displayErrorMessage(input) {
+    // Get the next sibling element of the input, which is the label
+    var label = input.nextElementSibling;
+
+    // If the input is invalid, set the content of the ::after pseudo-element to the error message
+    if (!input.validity.valid) {
+      label.style.setProperty("--error", "\"" + input.validationMessage + "\"");
+    }
+    // Otherwise, set the content of the ::after pseudo-element to an empty string
+    else {
+      label.style.setProperty("--error", "\"\"");
+    }
+  }
+
+  // Add an input event listener to each input element to check and display the error message when the user types
+  nameInput.addEventListener("input", function() {
+    checkValidity(nameInput);
+    displayErrorMessage(nameInput);
+  });
+
+  emailInput.addEventListener("input", function() {
+    checkValidity(emailInput);
+    displayErrorMessage(emailInput);
+  });
+
+  messageInput.addEventListener("input", function() {
+    checkValidity(messageInput);
+    displayErrorMessage(messageInput);
+  });
+
+  // Add a submit event listener to the form to prevent the default submission if any input is invalid
+  var form = document.querySelector("form");
+  form.addEventListener("submit", function(event) {
+    // Check the validity of each input
+    checkValidity(nameInput);
+    checkValidity(emailInput);
+    checkValidity(messageInput);
+
+    // If any input is invalid, prevent the default submission and display the error message
+    if (!nameInput.validity.valid || !emailInput.validity.valid || !messageInput.validity.valid) {
+      event.preventDefault();
+      displayErrorMessage(nameInput);
+      displayErrorMessage(emailInput);
+      displayErrorMessage(messageInput);
+    }
+  });
+</script>
+
+<!-- Add some CSS styles to style the form and the error message -->
+<style>
+  /* Style the form elements */
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Style the error message using the ::after pseudo-element */
+  label::after {
+    content: var(--error); /* Use a CSS custom property to store the error message */
+    display: block;
+    margin-top: 5px;
+    color: red;
+  }
+</style>
+
+
+<div class="image-container">
+  
+    <img src="https://th.bing.com/th/id/OIP.rstMQimkYhD3c3_Hb0jg7AHaEK?w=270&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="Image 2">
+  >
+</div>
+
+ <footer>
+     <div class="w3-bar w3-black">
+ 
+  <p>&copy; 2023 Pizza Paradise. All rights reserved. &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <b style="color:red;">NOTE :  This is page is for educational purposes </b>
+  </p>
+</div>
+
+ </footer>
+</body>
+</html>

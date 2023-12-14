@@ -94,7 +94,7 @@ nav ul li a {
             </ul>
         </nav>
   
-
+</header>
 <body>
   <div class="w3-container w3-green" style="border: 15px solid grey;text-align: center;">
   <p><h1>Add Pizza</h1></p>

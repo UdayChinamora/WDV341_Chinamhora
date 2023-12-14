@@ -9,7 +9,7 @@
 	<script type="text/javascript">
 		
 		function redirectToAddPizzaPage() {
-  window.location.href = "add.php";
+  window.location.href = "login.php";
 }
 	</script>
 </head>
