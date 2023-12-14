@@ -75,7 +75,9 @@
         <div><a href="selectOneEvent.php" class="button">7-2: Create selectOneEvent.php</a> </div>
         <div><a href="Php_Formated_Retail_Products.php" class="button">8-1: PHP Formatted Content</a> </div>
         <div> <a href="deliverEventObject.php" class="button">9-1: PHP-JSON Event Object</a> </div>
+
         <div> <a href="self_posting_form.php" class="button">11-1: Self Posting Input Event form with INSERT</a> </div>
+        <div> <a href="display-events.php" class="button">15-1: Create delete functionality</a></div>
        
 
  </div>
