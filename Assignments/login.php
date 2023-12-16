@@ -35,22 +35,21 @@ if (empty($username_err) && empty($password_err)) {
   $stmt->execute();
   $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-  // Check if a user with the given credentials exists
+  // Check if a user  exists
   if ($user) {
     // Save the user's information in a session variable
     $_SESSION['user'] = $user;
 
-    // Redirect the user to the welcome page
+    
     header("location:eventsForm.php");
   } else {
-    // Password is not valid, display an error message
+    // Password is not valid, display an error
     $password_err = "The password you entered was not valid.";
   }
 } elseif (empty($username_err) && !empty($password_err)) {
-  // Username does not exist, display an error message
+  // Username does not exist, display an error 
   $username_err = "No account found with that username.";
 } else {
-  // Statement execution failed, display an error message
   echo "Oops! Something went wrong. Please try again later.";
 }
    
@@ -60,9 +59,9 @@ if (empty($username_err) && empty($password_err)) {
 
 // Function to sanitize input data
 function test_input($data) {
-  $data = trim($data); // Remove extra space, tab, newline
-  $data = stripslashes($data); // Remove backslashes (\)
-  $data = htmlspecialchars($data); // Convert special characters to HTML entities
+  $data = trim($data); 
+  $data = stripslashes($data); 
+  $data = htmlspecialchars($data); 
   return $data;
 }
 
@@ -75,9 +74,14 @@ function test_input($data) {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Login</title>
   <style>
-    /* Add some style to the login form */
+  
     body {
       font-family: Arial, Helvetica, sans-serif;
     }

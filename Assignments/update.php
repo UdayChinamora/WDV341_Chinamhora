@@ -1,27 +1,75 @@
 <?php
-// connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'wdv341_events');
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+include_once 'dbConnectPizza.php';
+
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // check if the form is submitted
 if (isset($_POST['edit'])) {
   // get the form data
+   $id = $_POST['events_id'];
+    $name = $_POST['events_name'];
+    $description = $_POST['events_description'];
+    $presenter = $_POST['events_presenter'];
+    $date = $_POST['events_date'];
+    $time = $_POST['events_time'];
 
 
-    $id = $row['events_id'];
-    $name = $_POST['name'];
-    $description = $_POST['description'];
-    $presenter = $_POST['presenter'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
+  // update  the database
+    $sql = "UPDATE wdv341_events SET `events_name`='$name', `events_description`='$description', `events_presenter`='$presenter', `events_date`='$date', `events_time`='$time' WHERE events_id=$id";
+   $stmt = $conn->prepare($sql);
 
-
-  // update the record in the database
-    $sql = "UPDATE pizzas SET events_name,='$name', events_description='$description', events_presenter='$presenter', events_date='$date', events_time='$time' WHERE events_id='$id'";
-    mysqli_query($db, $sql);
-  
-        // redirect 
+    // Execute the statement and check the result
+    if ($stmt->execute()) {
+        // Event updated successfully
+             
   header('location:eventsForm.php');
+    } else {
+        // Error deleting event
+        echo"Error updating event: " . $stmt->error;
+    }
+  
+  
     } 
+
+
+
+// Check if the events_id key is set in the $_GET array
+if (isset($_GET['events_id'])) {
+  // Get the events_id value from the $_GET array
+  $id = $_GET['events_id'];
+  // query the database for the current values of the event
+  $sql = "SELECT * FROM wdv341_events  WHERE events_id ='$id'";
+  //$result = mysqli_query($db, $sql);
+  //$row = mysqli_fetch_assoc($result);
+  $result = $conn->query($sql);
+
+  // Check if the query returned any row
+  if ($result->rowCount() > 0) {
+    // Fetch the row as an associative array
+    $row = $result->fetch(PDO::FETCH_ASSOC);
+    // Assign the event data to variables
+    $name = $row['events_name'];
+    $description = $row['events_description'];
+    $presenter = $row['events_presenter'];
+    $date = $row['events_date'];
+    $time = $row['events_time'];
+  } else {
+    // No event found with the given id
+    echo "No event found with id $id";
+    exit;
+  }
+} else {
+  // Handle the case when the events_id key is not set
+  echo "No events_id parameter provided.";
+  exit;
+}
+
 
 
 
@@ -129,51 +177,43 @@ word-wrap: break-word;
 </head>
 <header>
        <nav>
-            <ul>
-                 <li><a href="index.php">Home</a></li>
-                <li><a href="aboutPizza.php">About Us</a></li>
-                <li><a href="register.php">Register</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="contactPizza.php">Contact</a></li>
+           <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="wdv341.php">Assignments</a></li>
+               <li><a href="login.php">Admin Login</a></li>
+              
             </ul>
         </nav>
   
-
+<header>
 <body>
   <div class="w3-container w3-green" style="border: 15px solid grey;text-align: center;">
-  <p><h1> <?php  echo"$pizzaName"?></h1></p>
+  <p><h1> <?php  echo"$name"?></h1></p>
 </div>
 
   
 
   <?php 
-   // display the form with the current values of the pizza
+   // display the form with the current values of the event
 
-  $id = $row['events_id'];
-    $name = $_POST['name'];
-    $description = $_POST['description'];
-    $presenter = $_POST['presenter'];
-    $date = $_POST['date'];
-    $time = $_POST['time'];
-
-echo "<form method='post' action='update.php'>";
+  echo "<form method='post' action='update.php'>";
 echo "<input type='hidden' name='events_id' value='$id'>";
-echo "<label for='name'>Event Name:</label>";
-echo "<input type='text' name='name' id='name' value='$name'><br><br><br>";
+echo "<label for='events_name'>Events Name:</label>";
+echo "<input type='text' name='events_name' id='events_name' value='$name'><br><br><br>";
 
-echo "<label for='description'>Description:</label>";
-echo"<textarea name='description' id='description'  rows='5' cols='60'>$description</textarea><br><br><br><br>";
+echo "<label for='events_description'>Description:</label>";
+echo"<textarea name='events_description' id='events_description'  rows='5' cols='60'>$description</textarea><br><br><br><br>";
 
-echo "<label for='presenter'>Presenter:</label>";
-echo"<textarea name='presenter' id='presenter'  rows='5' cols='60'>$presenter</textarea><br>";
+echo "<label for='events_presenter'>Presenter:</label>";
+echo"<textarea name='events_presenter' id='events_presenter'  rows='5' cols='60'>$presenter</textarea><br>";
 
 
 
-echo "<label for='date'>Date:</label>";
-echo "<input type='number' name='date' id='date' value='$date'><br><br><br>";
+echo "<label for='events_date'>Date:</label>";
+echo "<input type='date' name='events_date' id='events_date' value='$date'><br><br><br>";
 
-echo "<label for='time'>Time</label>";
-echo "<input type='text' name='time' id='time' value='$time'><br><br><br>";
+echo "<label for='events_time'>Time</label>";
+echo "<input type='time' name='events_time' id='events_time' value='$time'><br><br><br>";
 
 
 echo "<input type='submit' name='edit' value='Edit and Save'><br><br><br>";

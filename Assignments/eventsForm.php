@@ -47,15 +47,80 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
+<!DOCTYPE html>
 <html>
 <head>
     <title>Events Form</title>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    
+    <img src="../images/homework.jpg" alt="Homework Image">
+
+<style type="text/css">
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content: center;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:green;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+   height: fit-content;
+  transition: background-color 0.3s ease;
+  font-size: small;
+}
+.h1{
+    font-family: "Sofia", sans-serif;
+    text-align: center;
+    font-style:oblique ;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+</style>
+
 </head>
+<header>
+       <nav>
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="wdv341.php">Assignments</a></li>
+               <li><a href="login.php">Admin Login</a></li>
+               <li><a href="register.php">Admin Register</a></li>
+                <li><a href="logout.php">Log Out</a></li>
+              
+            </ul>
+        </nav>
+</header>
 <body>
     <h1>Events Form</h1>
     <?php
-    // Display the message if any
+    // Display the message
     if (isset($message)) {
         echo "<p>$message</p>";
     }
@@ -97,11 +162,8 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Query the events table
 $sql = "SELECT * FROM wdv341_events";
-//$result = mysqli_query($conn, $sql);
 $result = $conn->query($sql);
-// Check if there are any events
-//if (mysqli_num_rows($result) > 0) {
-    // Display the events in a table
+
     echo "<table>";
     echo "<tr><th>ID</th><th>Name</th><th>Description</th><th>Presenter</th><th>Date</th><th>Time</th></tr>";
     //while ($row = mysqli_fetch_assoc($result)) {
@@ -124,8 +186,7 @@ $result = $conn->query($sql);
         echo "<td>$time</td>";
 
         // Create a delete button for each event
-        // Use a hidden input field as a honeypot
-        // Use a JavaScript function to confirm the deletion
+        
         echo "<td>";
         echo "<form action='delete-event.php' method='POST'>";
         echo "<input type='hidden' name='honeypot' value=''>";
@@ -134,19 +195,14 @@ $result = $conn->query($sql);
         echo "</form>";
         echo "</td>";
 
-
+// Create a update button for each event
            echo "<td>";
-        echo "<form action='update.php' method='POST'>";
+        echo "<form action='update.php' method='get'>";
         echo "<input type='hidden' name='honeypot' value=''>";
-        echo "<input type='hidden' name='id' value='$id'>";
+        echo "<input type='hidden' name='events_id' value='$id'>";
          echo "<button type='submit' onclick='return confirmUpdate();'>Update</button>";
         echo "</form>";
         echo "</td>";
-       
-
-
-
-
         echo "</tr>";
     }
     echo "</table>";
@@ -157,26 +213,26 @@ $conn = null;
 ?>
 
 <script>
-// Define a function to confirm the deletion
+// Define a function to confirm the delete
 function confirmDelete() {
     // Check if the honeypot field is empty
     if (document.querySelector("input[name='honeypot']").value == "") {
-        // Ask the user to confirm the deletion
+        // Ask the user to confirm the delete
         return confirm("Are you sure you want to delete this event?");
     } else {
-        // The honeypot field is filled, so it is a spam
+        
         return false;
     }
 }
 
-// Define a function to confirm the update
+
 function confirmUpdate() {
     // Check if the honeypot field is empty
     if (document.querySelector("input[name='honeypot']").value == "") {
-        // Ask the user to confirm the deletion
+        // Ask the user to confirm the update
         return confirm("Are you sure you want to update this event?");
     } else {
-        // The honeypot field is filled, so it is a spam
+       
         return false;
     }
 }
