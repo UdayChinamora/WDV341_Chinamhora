@@ -9,7 +9,9 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "SELECT * FROM wdv341_events";
 //$result = mysqli_query($conn, $sql);
 $result = $conn->query($sql);
-
+// Check if there are any events
+//if (mysqli_num_rows($result) > 0) {
+    // Display the events in a table
     echo "<table>";
     echo "<tr><th>ID</th><th>Name</th><th>Description</th><th>Presenter</th><th>Date</th><th>Time</th></tr>";
     //while ($row = mysqli_fetch_assoc($result)) {
@@ -33,7 +35,7 @@ $result = $conn->query($sql);
 
         // Create a delete button for each event
         // Use a hidden input field as a honeypot
-        
+        // Use a JavaScript function to confirm the deletion
         echo "<td>";
         echo "<form action='delete-event.php' method='POST'>";
         echo "<input type='hidden' name='honeypot' value=''>";
@@ -55,10 +57,10 @@ $conn = null;
 function confirmDelete() {
     // Check if the honeypot field is empty
     if (document.querySelector("input[name='honeypot']").value == "") {
-        // Ask the user
+        // Ask the user to confirm the deletion
         return confirm("Are you sure you want to delete this event?");
     } else {
-        // The honeypot field is filled
+        // The honeypot field is filled, so it is a spam
         return false;
     }
 }

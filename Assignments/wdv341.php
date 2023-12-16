@@ -55,11 +55,12 @@
                 <li><a href="wdv341.php">Assignments</a></li>
                 <li><a href="selectEvents.php">Connect</a></li>
                 <li><a href="../contactUs.php">Contact</a></li>
+                <li><a href="login.php">Admin Login</a></li>
               
             </ul>
         </nav>
 </header>
-
+<br><br><br>
 <body>
 
 
@@ -78,7 +79,8 @@
 
         <div> <a href="self_posting_form.php" class="button">11-1: Self Posting Input Event form with INSERT</a> </div>
         <div> <a href="display-events.php" class="button">15-1: Create delete functionality</a></div>
-       
+        <div> <a href="eventsForm.php" class="button">12-1: Create a form page for the events</a> </div>
+        <div> <a href="login.php" class="button">13-2: Create a login.php page</a></div>
 
  </div>
  <div><img src="../images/homework2.jpg" alt="Homework Image" style=" float: right;"></div>
